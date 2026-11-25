@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <!-- Downloaded APKs live in filesDir/updates (not the cache, which the OS may clear). -->
+    <files-path name="updates" path="updates/" />
+    <cache-path name="updates_cache" path="updates/" />
+</paths>

@@ -1,0 +1,76 @@
+<resources>
+    <string name="app_name">EFX</string>
+
+    <!-- Меню -->
+    <string name="menu_settings">Настройки</string>
+    <string name="menu_reload">Обновить страницу</string>
+    <string name="menu_check_updates">Проверить обновления</string>
+    <string name="menu_version">Версия %1$s</string>
+
+    <!-- Настройки -->
+    <string name="settings_title">Настройки</string>
+    <string name="settings_back">Назад</string>
+    <string name="settings_site_version">Версия сайта</string>
+    <string name="settings_mode_mobile">Мобильная</string>
+    <string name="settings_mode_desktop">Десктопная</string>
+    <string name="settings_css">CSS</string>
+    <string name="settings_js">JavaScript</string>
+    <string name="settings_css_hint">Добавляется на каждую страницу</string>
+    <string name="settings_js_hint">Выполняется один раз за загрузку</string>
+    <string name="settings_note">Изменения применятся после перезагрузки страницы.</string>
+    <string name="settings_save">Сохранить</string>
+    <string name="settings_reset">Сбросить правки</string>
+    <string name="settings_cancel">Отмена</string>
+
+    <!-- Обновления -->
+    <string name="update_title">Обновление</string>
+    <string name="update_idle">Нажмите «Проверить ещё раз», чтобы найти новый релиз.</string>
+    <string name="update_checking">Проверка обновлений…</string>
+    <string name="update_up_to_date">У вас последняя версия.</string>
+    <string name="update_available">Доступна версия %1$s.</string>
+    <string name="update_download">Скачать</string>
+    <string name="update_downloading">Загрузка: %1$d%%</string>
+    <string name="update_verifying">Проверка контрольной суммы и подписи…</string>
+    <string name="update_ready">APK проверен и готов к установке.</string>
+    <string name="update_install">Установить</string>
+    <string name="update_retry">Проверить ещё раз</string>
+    <string name="update_close">Закрыть</string>
+    <string name="update_cancel">Отменить</string>
+    <string name="update_size">Размер APK: %1$s</string>
+    <string name="update_permission_hint">Разрешите установку из этого источника и нажмите «Установить» снова.</string>
+    <string name="update_apk_missing">Скачанный файл пропал. Скачайте его заново.</string>
+
+    <string name="update_error_not_configured">Источник обновлений не настроен в этой сборке.</string>
+    <string name="update_error_network">Ошибка сети. Проверьте подключение и повторите попытку.</string>
+    <string name="update_error_http">Сервер вернул ошибку (%1$s).</string>
+    <string name="update_error_rate_limit">Достигнут лимит запросов GitHub. Повторите позже.</string>
+    <string name="update_error_no_release">Опубликованный релиз не найден.</string>
+    <string name="update_error_bad_tag">Тег релиза не является корректной версией.</string>
+    <string name="update_error_no_apk">В релизе нет APK.</string>
+    <string name="update_error_no_checksums">В релизе нет контрольных сумм, установка заблокирована.</string>
+    <string name="update_error_checksum">SHA-256 не совпал. Файл повреждён или подменён.</string>
+    <string name="update_error_signature">APK подписан другим ключом и отклонён.</string>
+    <string name="update_error_io">Не удалось прочитать или записать скачанный файл.</string>
+    <string name="update_error_parse">Не удалось разобрать ответ сервера об обновлении.</string>
+    <string name="update_error_unknown">Что-то пошло не так.</string>
+
+    <!-- WebView -->
+    <string name="error_title">Страница не загрузилась</string>
+    <string name="error_generic">Проверьте подключение и повторите попытку.</string>
+    <string name="error_ssl">Сертификат сайта не удалось проверить, загрузка заблокирована.</string>
+    <string name="error_http">Сайт вернул HTTP %1$d.</string>
+    <string name="error_retry">Повторить</string>
+
+    <string name="download_started">Загрузка %1$s</string>
+    <string name="download_unsupported">Эту ссылку нельзя скачать напрямую.</string>
+    <string name="download_failed">Не удалось скачать файл.</string>
+    <string name="renderer_restarted">Страница перезагружена после сбоя WebView.</string>
+
+    <!-- Онбординг -->
+    <string name="onboarding_title">Как открыть меню</string>
+    <string name="onboarding_text">Коснитесь экрана двумя пальцами дважды.\nЕсли не сработало — коснитесь тремя пальцами один раз.</string>
+    <string name="onboarding_try">Открыть меню</string>
+    <string name="onboarding_ok">Понятно</string>
+
+    <string name="splash_loading">Загрузка…</string>
+</resources>

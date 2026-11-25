@@ -1,0 +1,76 @@
+<resources>
+    <string name="app_name">EFX</string>
+
+    <!-- Menu -->
+    <string name="menu_settings">Settings</string>
+    <string name="menu_reload">Reload page</string>
+    <string name="menu_check_updates">Check for updates</string>
+    <string name="menu_version">Version %1$s</string>
+
+    <!-- Settings -->
+    <string name="settings_title">Settings</string>
+    <string name="settings_back">Back</string>
+    <string name="settings_site_version">Site version</string>
+    <string name="settings_mode_mobile">Mobile</string>
+    <string name="settings_mode_desktop">Desktop</string>
+    <string name="settings_css">CSS</string>
+    <string name="settings_js">JavaScript</string>
+    <string name="settings_css_hint">Injected into every page</string>
+    <string name="settings_js_hint">Runs once per page load</string>
+    <string name="settings_note">Changes are applied after the page reloads.</string>
+    <string name="settings_save">Save</string>
+    <string name="settings_reset">Reset edits</string>
+    <string name="settings_cancel">Cancel</string>
+
+    <!-- Updates -->
+    <string name="update_title">Update</string>
+    <string name="update_idle">Tap “Check again” to look for a new release.</string>
+    <string name="update_checking">Checking for updates…</string>
+    <string name="update_up_to_date">You are on the latest version.</string>
+    <string name="update_available">Version %1$s is available.</string>
+    <string name="update_download">Download</string>
+    <string name="update_downloading">Downloading: %1$d%%</string>
+    <string name="update_verifying">Verifying checksum and signature…</string>
+    <string name="update_ready">The APK is verified and ready to install.</string>
+    <string name="update_install">Install</string>
+    <string name="update_retry">Check again</string>
+    <string name="update_close">Close</string>
+    <string name="update_cancel">Cancel</string>
+    <string name="update_size">APK size: %1$s</string>
+    <string name="update_permission_hint">Allow installing apps from this source, then tap “Install” again.</string>
+    <string name="update_apk_missing">The downloaded file is gone. Download it again.</string>
+
+    <string name="update_error_not_configured">The update source is not configured in this build.</string>
+    <string name="update_error_network">Network error. Check your connection and try again.</string>
+    <string name="update_error_http">Server returned an error (%1$s).</string>
+    <string name="update_error_rate_limit">GitHub rate limit reached. Try again later.</string>
+    <string name="update_error_no_release">No published release was found.</string>
+    <string name="update_error_bad_tag">The release tag is not a valid version.</string>
+    <string name="update_error_no_apk">The release does not contain an APK.</string>
+    <string name="update_error_no_checksums">The release has no checksums, so installation is blocked.</string>
+    <string name="update_error_checksum">SHA-256 mismatch. The file was corrupted or tampered with.</string>
+    <string name="update_error_signature">The APK is signed with a different key and was rejected.</string>
+    <string name="update_error_io">Could not read or write the downloaded file.</string>
+    <string name="update_error_parse">Could not parse the update response.</string>
+    <string name="update_error_unknown">Something went wrong.</string>
+
+    <!-- WebView -->
+    <string name="error_title">Page failed to load</string>
+    <string name="error_generic">Check your connection and try again.</string>
+    <string name="error_ssl">The site certificate could not be verified, so loading was blocked.</string>
+    <string name="error_http">The site returned HTTP %1$d.</string>
+    <string name="error_retry">Retry</string>
+
+    <string name="download_started">Downloading %1$s</string>
+    <string name="download_unsupported">This link cannot be downloaded directly.</string>
+    <string name="download_failed">Download failed.</string>
+    <string name="renderer_restarted">The page was reloaded after a WebView error.</string>
+
+    <!-- Onboarding -->
+    <string name="onboarding_title">How to open the menu</string>
+    <string name="onboarding_text">Two-finger double tap anywhere.\nIf that does not work, tap with three fingers once.</string>
+    <string name="onboarding_try">Open menu</string>
+    <string name="onboarding_ok">Got it</string>
+
+    <string name="splash_loading">Loading…</string>
+</resources>

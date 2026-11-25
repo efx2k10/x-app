@@ -63,18 +63,18 @@ Never commit a keystore. `*.jks` and `*.keystore` are ignored by git.
 
 ### Update source
 
-`gradle.properties` contains the GitHub owner/repository used by the update
-checker:
+The update checker reads releases from `efx2k10/x-app`. The values live in
+`gradle.properties`:
 
 ```properties
-github.owner=CHANGE_ME
-github.repo=CHANGE_ME
+github.owner=efx2k10
+github.repo=x-app
 ```
 
-Replace the placeholders for local builds. The release workflow injects them
-from the repository itself, so CI builds are always configured. With the
-placeholders, the app shows "update source is not configured" instead of
-failing silently.
+Forks should change them to their own repository. The release workflow injects
+the values from the repository itself, so CI builds are always configured. If
+the placeholders are left in place, the app shows "update source is not
+configured" instead of failing silently.
 
 ## Release
 
