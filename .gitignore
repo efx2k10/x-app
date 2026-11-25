@@ -18,3 +18,6 @@ keystore.properties
 dist/
 
 opencode.json
+
+# Local agent config (contains machine-specific settings)
+opencode.json
