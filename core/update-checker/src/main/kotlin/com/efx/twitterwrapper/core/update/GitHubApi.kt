@@ -12,7 +12,8 @@ import java.io.IOException
 @Serializable
 data class GitHubRelease(
     @SerialName("tag_name") val tagName: String,
-    @SerialName("body") val body: String = "",
+    /** GitHub returns `null` when the release has no description. */
+    @SerialName("body") val body: String? = null,
     @SerialName("assets") val assets: List<GitHubAsset> = emptyList(),
 )
 

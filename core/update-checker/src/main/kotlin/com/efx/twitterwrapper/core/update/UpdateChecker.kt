@@ -69,7 +69,7 @@ class UpdateChecker(
                     UpdateInfo(
                         versionName = parsed.versionName,
                         versionCode = parsed.versionCode,
-                        changelog = release.body,
+                        changelog = release.body.orEmpty(),
                         apkUrl = apkAsset.downloadUrl,
                         apkSize = apkAsset.size,
                         apkFileName = apkAsset.name,

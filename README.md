@@ -1,4 +1,4 @@
-# EFX
+# x-app
 
 A minimal Android wrapper around [x.com](https://x.com) with a built-in menu,
 user style/script injection, a mobile/desktop switch and self-updates from

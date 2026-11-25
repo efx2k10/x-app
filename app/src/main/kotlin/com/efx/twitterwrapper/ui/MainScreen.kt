@@ -4,6 +4,7 @@ import android.Manifest
 import android.content.Context
 import android.content.pm.PackageManager
 import android.os.Build
+import android.widget.FrameLayout
 import android.widget.Toast
 import androidx.activity.compose.BackHandler
 import androidx.activity.compose.rememberLauncherForActivityResult
@@ -35,6 +36,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.viewinterop.AndroidView
 import androidx.core.content.ContextCompat
+import androidx.core.view.doOnLayout
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.efx.twitterwrapper.BuildConfig
@@ -228,12 +230,16 @@ private fun MainContent(
                             onMenuGesture = { showMenu = true },
                         )
                     },
-                    update = { webView -> webView.onMenuGesture = { showMenu = true } },
-                    onRelease = { webView ->
+                    update = { container ->
+                        (container.getChildAt(0) as? TwitterWebView)?.onMenuGesture = { showMenu = true }
+                    },
+                    onRelease = { container ->
+                        val webView = container.getChildAt(0) as? TwitterWebView ?: return@AndroidView
                         if (holder.webView === webView) {
                             holder.webView = null
                             holder.injector = null
                         }
+                        container.removeView(webView)
                         webView.destroy()
                     },
                 )
@@ -351,7 +357,7 @@ private fun createWebView(
     holder: WebViewHolder,
     onProgress: (Int) -> Unit,
     onMenuGesture: () -> Unit,
-): TwitterWebView {
+): FrameLayout {
     val webView = TwitterWebView(context)
     WebViewSetup.configure(webView, settings.siteMode == SiteMode.DESKTOP)
     webView.webViewClient = TwitterWebViewClient(context, callbacks)
@@ -365,8 +371,21 @@ private fun createWebView(
     holder.webView = webView
     holder.injector = injector
 
-    webView.loadUrl(WebViewSetup.HOME_URL)
-    return webView
+    // A FrameLayout as the direct AndroidView child is required: Compose
+    // measures the direct child in a way that leaves Blink's viewport-unit
+    // height at 0 (100vh/100dvh == 0), which collapses dialogs sized with dvh
+    // (the X login form is one). The wrapper gives the WebView a normal size.
+    val container = FrameLayout(context)
+    container.addView(
+        webView,
+        FrameLayout.LayoutParams(
+            FrameLayout.LayoutParams.MATCH_PARENT,
+            FrameLayout.LayoutParams.MATCH_PARENT,
+        ),
+    )
+
+    webView.doOnLayout { webView.loadUrl(WebViewSetup.HOME_URL) }
+    return container
 }
 
 private class WebViewHolder {
