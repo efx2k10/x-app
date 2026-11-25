@@ -59,7 +59,18 @@ KEY_PASSWORD=... \
 ./gradlew :app:assembleRelease -PversionName=1.2.3
 ```
 
-Never commit a keystore. `*.jks` and `*.keystore` are ignored by git.
+Never commit a keystore. `*.jks`, `*.keystore` and `keystore.properties` are
+ignored by git.
+
+The release key of this repository is kept outside git as `keystore.jks` plus
+`keystore.properties` (both ignored). **Back both up offline** (password
+manager, encrypted archive): losing the key means already installed copies can
+never be updated. The same key reaches CI through the four repository secrets.
+The release certificate fingerprint (SHA-256) is:
+
+```
+D8:7E:43:95:6B:DC:C9:17:5C:E9:67:1C:4C:D7:80:55:6F:FA:A3:F4:84:89:C9:69:38:26:E9:37:55:99:96:F3
+```
 
 ### Update source
 
